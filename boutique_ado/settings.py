@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['boutique-ado-atinos.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ckz8780-boutique-ado.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -122,13 +122,11 @@ if 'DATABASE_URL' in os.environ:
     }
 else:
     DATABASES = {
-       'default': {
-           'ENGINE': 'django.db.backends.sqlite3',
-           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-       }
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-
-
 
 
 # Password validation
@@ -172,9 +170,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
